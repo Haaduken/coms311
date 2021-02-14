@@ -1,0 +1,164 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,epic,epsfig,latexsym,enumerate}
+\usepackage{enumitem}
+\usepackage[titlenotnumbered,linesnumbered,noend,plain]{algorithm2e}
+\usepackage{listings}
+\usepackage{fullpage}
+
+\newtheorem{lemma}{Lemma}
+\usepackage{url}
+
+\SetKwProg{Fn}{}{}{}
+
+\begin{document}
+
+
+
+%\thispagestyle{empty}
+
+%\hspace{0.11cm} \vspace{2cm}
+
+\title{
+Com S 311 Spring 2021\\
+Homework 1
+}
+
+\maketitle
+
+
+\vspace{-.8cm}
+\begin{center}
+{\bf Due:  February 19 11:59 p.m.}
+
+\smallskip
+\textbf{Early submission: February 18, 11:59 p.m., (5\% bonus)}
+
+\smallskip
+{\bf Late Submission Due: February 20, 11:59 \textbf{A.M.} (25\% penalty)}
+\end{center}
+
+\medskip
+
+\section*{Guidelines}
+
+
+\begin{itemize}
+
+\item %It is important to know whether you really know. 
+For each problem, if you write  the statement ``I do not know how to solve this problem'' (and nothing else), you will receive 20\% credit for that problem. If you do write a solution, then your grade could be anywhere between 0\% to 100\%.
+To receive this 20\% credit, you must explicitly state that you do not know how to solve the problem.
+
+\item You are allowed to discuss with classmates, but you must work on the homework problems on your own.  You should write the final solutions alone, without consulting anyone. Your writing should demonstrate that you understand the proofs completely.
+
+\item When proofs are required, you should make them both clear and rigorous. Do not hand-waive.
+
+ \item Please submit your assignment via Canvas.
+ \begin{itemize}
+\item  You \textbf{must} type your solutions. Please submit a PDF version.
+\item Please make sure that the file you submit is not corrupted and that its size is reasonable (e.g., roughly at most 10-11 MB).
+\begin{center}
+\emph{If we cannot open your file, your homework will not be graded.}
+\end{center}
+\end{itemize}
+
+\item Any concerns about grading should be expressed within one week of
+returning the homework. 
+ 
+\end{itemize}
+
+\section*{Problems}
+
+%
+
+
+\begin{enumerate}
+\item Prove or disprove the following statements.
+\begin{enumerate}
+\item $n^2 - 10n + 2 = O(n^2)$.
+\item $2^{n^2} = O(2^{2n})$.
+\item $n\log_2(n) = O(n\log_{10}(n))$.
+\item $n\log_2(n) = O(n)$.
+\item $n2^n = O(2^{2n})$.
+\end{enumerate}
+
+
+
+
+\bigskip
+
+\item Consider the following algorithms (written in pseudocode):
+
+\smallskip
+
+\begin{algorithm}[H]
+\Fn(){Alg1(A)}{
+\KwIn{Array of integers of length $n$}
+\SetAlgoLined
+\SetNoFillComment
+\DontPrintSemicolon
+	constant number of operations \\
+	\For{$i = 1$ to $n$}{
+		constant number of operations
+	}
+	\For{$j = n$ to $1$}{
+		\For{$k = j$ to $1$}{
+			constant number of operations
+		}
+	}
+}
+\end{algorithm}
+
+\bigskip
+
+\begin{algorithm}[H]
+\Fn(){Alg2(A)}{
+\KwIn{Array of integers of length $n$}
+\SetAlgoLined
+\SetNoFillComment
+\DontPrintSemicolon
+	\For{$i = n$ to $1$}{
+		constant number of operations \\
+		$i = i / 2$
+	}
+}
+\end{algorithm}
+
+\smallskip
+
+Formally analyze the runtime of Alg1 and Alg2, and give the runtime of each in big oh notation. You must show your work - clearly and rigorously derive the runtime, do not just give the big oh bound.
+
+\bigskip
+
+\item Given an array $A$ of integers, we say that an integer $k$ is the \textit{majority element of $A$} if $k$ occurs in $A$ strictly more than $A$.length $/2$ times. Give a Divide and Conquer algorithm which, given an array $A$, determines if $A$ contains a majority element. If $A$ does contain a majority element $k$, it outputs $k$, otherwise, it outputs "null``. Formally analyze the runtime of your algorithm, giving a recurrence relation and a big oh bound on the runtime of your algorithm. You \textbf{must} use a divide and conquer strategy. You do not have to prove correctness.
+
+\bigskip
+
+\item Using the Master Theorem, bound the runtime $T(n)$ of the following recurrence. 
+\begin{center}
+$T(n) = 3T(n/2) + n^2$, where $T(1) = O(1)$.
+\end{center}
+You must state which case of the Master Theorem holds, and prove that it does apply.
+
+\bigskip
+ 
+\item Using the recurrence tree method, solve the following recurrence:
+\begin{center}
+$T(n) = 2T(n/2) + n\log_2(n)$, where $T(1) = O(1)$.
+\end{center}
+You do not have to draw the tree (you of course can, if you want). You can, instead, state clearly the sum of each level of the tree, and then rigorously bound the sum of each level using big oh notation.
+
+
+
+\bigskip
+
+\item Professor Caesar wishes to develop an integer-multiplication algorithm that is asymptotically faster than Karatsuba’s $O(n^{\log_2(3)})$ algorithm. His algorithm will use the divide-and-conquer method, dividing each integer into pieces of size n/4, and the divide and combine steps together will take O(n) time. He needs to determine how many subproblems his algorithm has to create in order to beat Karatsuba’s algorithm. If his algorithm creates $a$ (an integer) subproblems, then the recurrence for the running time $T(n)$ becomes $T(n) = aT(n/4) + n$. What is the largest integer value of $a$ for which Professor Caesar’s algorithm would be asymptotically faster than $O(n^{\log_2(3)})$? Justify your answer.
+
+\end{enumerate}
+
+
+\bigskip
+
+
+
+
+\end{document}
