@@ -75,7 +75,7 @@ returning the homework.
 \item Prove or disprove the following statements.
 \begin{enumerate}
 \item $n^2 - 10n + 2 = O(n^2)$.
-\\* \hspace{10mm} test
+\subitem test
 \item $2^{n^2} = O(2^{2n})$.
 \item $n\log_2(n) = O(n\log_{10}(n))$.
 \item $n\log_2(n) = O(n)$.
@@ -109,6 +109,23 @@ returning the homework.
 }
 \end{algorithm}
 
+\smallskip
+\begin{algorithm}[H]
+\Fn(){Runtimes per line}{
+\KwIn{Array of integers of length $n$}
+\SetAlgoLined
+\SetNoFillComment
+\DontPrintSemicolon
+	$c$\\
+	$n+1$\\
+	$c*n$\\
+	$n+1$\\
+	$n^2+1$\\
+	$c*n^2$
+}
+\end{algorithm}
+$(c + 1)n^2+(c+2)n+3=O(n^2)$
+
 \bigskip
 
 \begin{algorithm}[H]
@@ -124,6 +141,15 @@ returning the homework.
 }
 \end{algorithm}
 
+\begin{flalign*}
+	\hspace{1.2cm}
+	\log(n) &\Longleftarrow
+		\begin{cases}
+			\textbf{for}\ i \rightarrow n\ to\ 1\ \textbf{do}\\
+			\hspace{0.5cm} \text{constant number of operations}\\
+			\hspace{0.5cm} i \rightarrow i/2
+		\end{cases}&
+\end{flalign*}
 \smallskip
 
 Formally analyze the runtime of Alg1 and Alg2, and give the runtime of each in big oh notation. You must show your work - clearly and rigorously derive the runtime, do not just give the big oh bound.
@@ -139,9 +165,17 @@ Formally analyze the runtime of Alg1 and Alg2, and give the runtime of each in b
 $T(n) = 3T(n/2) + n^2$, where $T(1) = O(1)$.
 \end{center}
 You must state which case of the Master Theorem holds, and prove that it does apply.
-
+\\\\
+Case 3\\
+A = 3\\
+$\frac{n}{B} = \frac{n}{2}$\\
+$F(n) = n^2$\\
+$log_2(3) = 1.585 < 2$\\
+$F(n) < n^(Log_B A + \varepsilon)$\\
+$\varepsilon$ is a constant\\
+$3T\frac{n}{2} + n^2 \Rightarrow \Theta(n^2)$
 \bigskip
- 
+
 \item Using the recurrence tree method, solve the following recurrence:
 \begin{center}
 $T(n) = 2T(n/2) + n\log_2(n)$, where $T(1) = O(1)$.
