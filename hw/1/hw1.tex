@@ -28,13 +28,13 @@ Homework 1
 
 \vspace{-.8cm}
 \begin{center}
-{\bf Due:  February 19 11:59 p.m.}
+{\bf Due:  February 26 11:59 p.m.}
 
 \smallskip
-\textbf{Early submission: February 18, 11:59 p.m., (5\% bonus)}
+\textbf{Early submission: February 25, 11:59 p.m., (5\% bonus)}
 
 \smallskip
-{\bf Late Submission Due: February 20, 11:59 \textbf{A.M.} (25\% penalty)}
+{\bf Late Submission Due: February 27, 11:59 \textbf{A.M.} (25\% penalty)}
 \end{center}
 
 \medskip
@@ -75,11 +75,15 @@ returning the homework.
 \item Prove or disprove the following statements.
 \begin{enumerate}
 \item $n^2 - 10n + 2 = O(n^2)$.
-\subitem test
+\subitem $f(n)\leq c*g(n)$\\$c>0$ for all $n>1$\\$c=2, n=1\\1^2-10(1)+2\leq 2*1^2\\-7\leq 2$\\Let c = 2 for all $n > 1$\\$1-\frac{10}{n}+\frac{2}{n^2}<2\\\lim_{n \to \infty}\frac{f(n)}{g(n)}\rightarrow 1 - 0 - 0 < 2$  
 \item $2^{n^2} = O(2^{2n})$.
+\subitem For $n > 1 c = 1, f(n)\leq c*g(n)$ is false\\$n=1 \rightarrow 2^{2^2} = 16 = 2^{2*2}$ Which satisfies the statement, however\\$n = 4 \rightarrow 2^{4^2} = 65536 > 256 = 2^{2*4}$\\$2^{n^2}$ is not $O(n^{2*n})$ because there exists no value greater than n = 2 that satisfies the relationship when c = 1.
 \item $n\log_2(n) = O(n\log_{10}(n))$.
+\subitem $n = 2, c = 1\\2log_2(2) = 2log_{10}(2)*1\\1.0 \leq 0.3\\lim_{n \to \infty}\frac{f(n)}{g(n)} \rightarrow lim_{n \to \infty}\frac{nlog_2(n)}{nlog_{10}(n)}$\\For any c there is no value for n that will make $nlog_{10}(n)$ greater than or equal to $n\log_2(n)$.
 \item $n\log_2(n) = O(n)$.
+\subitem 
 \item $n2^n = O(2^{2n})$.
+\subitem 
 \end{enumerate}
 
 
