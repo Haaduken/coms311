@@ -7,7 +7,7 @@
 
 \newtheorem{lemma}{Lemma}
 \usepackage{url}
-
+\usepackage{listings}
 \SetKwProg{Fn}{}{}{}
 
 \begin{document}
@@ -161,6 +161,25 @@ Formally analyze the runtime of Alg1 and Alg2, and give the runtime of each in b
 \bigskip
 
 \item Given an array $A$ of integers, we say that an integer $k$ is the \textit{majority element of $A$} if $k$ occurs in $A$ strictly more than $A$.length $/2$ times. Give a Divide and Conquer algorithm which, given an array $A$, determines if $A$ contains a majority element. If $A$ does contain a majority element $k$, it outputs $k$, otherwise, it outputs "null``. Formally analyze the runtime of your algorithm, giving a recurrence relation and a big oh bound on the runtime of your algorithm. You \textbf{must} use a divide and conquer strategy. You do not have to prove correctness.
+
+\smallskip
+
+\begin{lstlisting}
+int majorElem(int[] arr, int left, int right){
+	if(left > right) return -1
+	if(left == right) return arr[left]
+	int mid = left + (right - left)/2
+	int lCnt = majorElem(arr, left, mid)
+	int rCnt = majorElem(arr, mid, right)
+
+	if(lCnt == -1 and rCnt != -1){
+		int num = count(arr, left, right, rCnt)
+		if(num > (right-left+1)/2){
+			return rCnt
+		}
+	}
+}
+\end{lstlisting}
 
 \bigskip
 

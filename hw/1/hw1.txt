@@ -1,0 +1,22 @@
+\begin{algorithm}[H]
+	\Fn(){Div N Conq}{
+	%\KwIn{Array of integers of length $n$}
+	\SetAlgoLined
+	\SetNoFillComment
+	\PrintSemicolon
+		int majElem(int[] arr, int left, int right){\\
+			if($left > right$) return -1;\\
+			if($left == right$) return arr[left];\\
+			int $mid = (left + (right - left)/2)$;\\
+			int leftCount = majElem(arr,left,mid);\\
+			int rightCount = majElem(arr,mid,right);\\
+
+			if($leftCount == -1 && rightCount !=-1$){\\
+				int num = count(arr, left, right, leftCount);\\
+				if(num $>$ ($right-left+1)/2$) return leftCount;\\
+				return -1;\\
+			}
+			return-1;
+		}
+	}
+\end{algorithm}
