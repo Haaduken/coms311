@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1614226993 "c:/Users/haadi/repos/311coms/hw/1/hw1.tex" "c:/Users/haadi/repos/311coms/hw/1/hw1.pdf" "hw1" 1614226995
-  "c:/Users/haadi/repos/311coms/hw/1/hw1.aux" 1614226995 411 7e0327f9ee5c7a6dc5d4aa8406e3f8c6 ""
-  "c:/Users/haadi/repos/311coms/hw/1/hw1.tex" 1614226992 8524 bfed6fbb16daf1af0580d61834c6f02a ""
+["pdflatex"] 1614284033 "c:/Users/haadi/repos/311coms/hw/1/hw1.tex" "c:/Users/haadi/repos/311coms/hw/1/hw1.pdf" "hw1" 1614284035
+  "c:/Users/haadi/repos/311coms/hw/1/hw1.aux" 1614284035 411 7e0327f9ee5c7a6dc5d4aa8406e3f8c6 ""
+  "c:/Users/haadi/repos/311coms/hw/1/hw1.tex" 1614284031 8622 06979295623b6026541b7bb5a327b1ca ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1613355928 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1613357263 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1613356696 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -96,11 +96,11 @@
   "c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1613362709 5101076 f5d1edaecebb39e07b33e6f68c6f933d ""
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1613362835 1334348 c31b14ca8d4f51296d3c9cea482cd883 ""
   "c:/texlive/2020/texmf.cnf" 1613362580 713 e69b156964470283e0530f5060668171 ""
-  "hw1.aux" 1614226995 411 7e0327f9ee5c7a6dc5d4aa8406e3f8c6 "pdflatex"
-  "hw1.tex" 1614226992 8524 bfed6fbb16daf1af0580d61834c6f02a ""
+  "hw1.aux" 1614284035 411 7e0327f9ee5c7a6dc5d4aa8406e3f8c6 "pdflatex"
+  "hw1.tex" 1614284031 8622 06979295623b6026541b7bb5a327b1ca ""
   (generated)
-  "hw1.pdf"
   "hw1.aux"
-  "c:/Users/haadi/repos/311coms/hw/1/hw1.log"
-  "hw1.log"
+  "hw1.pdf"
   "c:/Users/haadi/repos/311coms/hw/1/hw1.pdf"
+  "hw1.log"
+  "c:/Users/haadi/repos/311coms/hw/1/hw1.log"
