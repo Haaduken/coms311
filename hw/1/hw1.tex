@@ -165,22 +165,26 @@ Formally analyze the runtime of Alg1 and Alg2, and give the runtime of each in b
 \smallskip
 
 \begin{lstlisting}
-int majorElem(int[] arr, int left, int right){
-	if(left > right) return -1
-	if(left == right) return arr[left]
-	int mid = left + (right - left)/2
-	int lCnt = majorElem(arr, left, mid)
-	int rCnt = majorElem(arr, mid, right)
+int majElem(int[] arr, int left, int right){
+	if(left == right) return null
+	if(left+1 == right) return arr[left]
+	lCnt = 0
+	rCnt = 0
+	lMajElem = majElem(arr, left, (right + left - 1)/2+1)
+	rMajElem = majElem(arr, (right + left - 1)/2+1, right)
 
-	if(lCnt == -1 and rCnt != -1){
-		int num = count(arr, left, right, rCnt)
-		if(num > (right-left+1)/2){
-			return rCnt
-		}
+	for (i = left; i < right; i++){
+		if(a[i]==lMajElem) lCnt++
+		if(lCnt > (right-left)/2) return lMajElem
 	}
+
+	for (i = left; i < right; i++){
+		if(a[i]==lMajElem) rCnt++
+		if(rCnt > (right-left)/2) return rMajElem
+	}	
 }
 \end{lstlisting}
-
+Sum of 1 through n of $\frac{n}{2}$ is $log(n)$, Then 2 linearily based checks occur (the for loops) equating to a run time of 2n, which can be rebased as just n. Thus the runtime of this algo is $n * log(n)$. 
 \bigskip
 
 \item Using the Master Theorem, bound the runtime $T(n)$ of the following recurrence. 

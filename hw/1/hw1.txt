@@ -20,3 +20,16 @@
 		}
 	}
 \end{algorithm}
+
+if(left > right) return -1
+	if(left == right) return arr[left]
+	int mid = left + (right - left)/2
+	int lCnt = majorElem(arr, left, mid)
+	int rCnt = majorElem(arr, mid, right)
+
+	if(lCnt == -1 and rCnt != -1){
+		int num = count(arr, left, right, rCnt)
+		if(num > (right-left+1)/2){
+			return rCnt
+		}
+	}
