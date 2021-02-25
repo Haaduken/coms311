@@ -77,11 +77,11 @@ returning the homework.
 \item $n^2 - 10n + 2 = O(n^2)$.
 \subitem $f(n)\leq c*g(n)$\\$c>0$ for all $n>1$\\$c=2, n=1\\1^2-10(1)+2\leq 2*1^2\\-7\leq 2$\\Let c = 2 for all $n > 1$\\$1-\frac{10}{n}+\frac{2}{n^2}<2\\\lim_{n \to \infty}\frac{f(n)}{g(n)}\rightarrow 1 - 0 - 0 < 2$  
 \item $2^{n^2} = O(2^{2n})$.
-\subitem For $n > 1 c = 1, f(n)\leq c*g(n)$ is false\\$n=1 \rightarrow 2^{2^2} = 16 = 2^{2*2}$ Which satisfies the statement, however\\$n = 4 \rightarrow 2^{4^2} = 65536 > 256 = 2^{2*4}$\\$2^{n^2}$ is not $O(n^{2*n})$ because there exists no value greater than n = 2 that satisfies the relationship when c = 1.
+\subitem For $n > 1 c = 1, f(n)\leq c*g(n)$ is false\\$n=1 \rightarrow 2^{2^2} = 16 = 2^{2*2}$ Which satisfies the statement, however\\$n = 4 \rightarrow 2^{4^2} = 65536 > 256 = 2^{2*4}$\\$2^{n^2}$ is not $O(n^{2*n})$ because there exists no value greater than n = 2 that satisfies the relationship when c = 1.\\Disproven
 \item $n\log_2(n) = O(n\log_{10}(n))$.
-\subitem $n = 2, c = 1\\2log_2(2) = 2log_{10}(2)*1\\1.0 \leq 0.3\\lim_{n \to \infty}\frac{f(n)}{g(n)} \rightarrow lim_{n \to \infty}\frac{nlog_2(n)}{nlog_{10}(n)}$\\For any c there is no value for n that will make $nlog_{10}(n)$ greater than or equal to $n\log_2(n)$.
+\subitem $n = 2, c = 1\\2log_2(2) = 2log_{10}(2)*1\\1.0 \leq 0.3\\lim_{n \to \infty}\frac{f(n)}{g(n)} \rightarrow lim_{n \to \infty}\frac{nlog_2(n)}{nlog_{10}(n)}$\\For any c there is no value for n that will make $nlog_{10}(n)$ greater than or equal to $n\log_2(n)$.\\Disproven
 \item $n\log_2(n) = O(n)$.
-\subitem For $n>2$ let $c = 1\\log_2(n) > 1\\nlog_2(n)=n*c\\log_2(n)=c$\\As long as $log_2(n) > c$ then $nlog_2(n) > O(n)\\\therefore$ Disproven for all $n>2$ 
+\subitem For $n>2$ let $c = 1\\log_2(n) > 1\\nlog_2(n)=n*c\\log_2(n)=c$\\As long as $log_2(n) > c$ then $nlog_2(n) > O(n)\\\therefore$ Disproven for all $n>2$ \\Disproven
 \item $n2^n = O(2^{2n})$.
 \subitem $For n = 2\\2*2^2 \leq 2^{2*2}\\8 \leq 16\\\lim_{n \to \infty}\frac{f(n)}{g(n)} =\frac{n*2^n}{2^{2*n}} = 0$\\g(n) grows faster than f(n) and f $\in O(g)$\\$\therefore$ for all $n\geq 1$ and all $c \geq 1, n*2^n = O(2^{2*n})$
 \end{enumerate}
@@ -147,7 +147,7 @@ $(c + 1)n^2+(c+2)n+3=O(n^2)$
 
 \begin{flalign*}
 	\hspace{1.2cm}
-	\log(n) &\Longleftarrow
+	O(\log(n)) &\Longleftarrow
 		\begin{cases}
 			\textbf{for}\ i \rightarrow n\ to\ 1\ \textbf{do}\\
 			\hspace{0.5cm} \text{constant number of operations}\\
