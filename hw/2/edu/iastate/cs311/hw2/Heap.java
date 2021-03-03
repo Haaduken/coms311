@@ -120,7 +120,7 @@ public class Heap<E extends Comparable<? super E>>
       throw new NoSuchElementException();
     }
     else{
-      
+
       return null;
     }
   }
@@ -142,6 +142,12 @@ public class Heap<E extends Comparable<? super E>>
   // If the size of the heap is less than 2, it throws new NoSuchElementException().
   public void trimEveryLeaf()
   {
+    if(list.size() < 2){
+    throw new NoSuchElementException();
+  }
+    else{
+
+    }
   }
 
   // TODO: O(log n)
