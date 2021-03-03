@@ -116,6 +116,13 @@ public class Heap<E extends Comparable<? super E>>
   // If the size of the heap is less than 2, it throws new NoSuchElementException().
   public  E getLastInternal()
   {
+    if(list.size() < 2){
+      throw new NoSuchElementException();
+    }
+    else{
+      
+      return null;
+    }
   }
 
   public E removeMin()
