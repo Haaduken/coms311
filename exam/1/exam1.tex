@@ -1,0 +1,132 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,epic,epsfig,latexsym,enumerate}
+\usepackage{enumitem}
+\usepackage[titlenotnumbered,linesnumbered,noend,plain]{algorithm2e}
+\usepackage{listings}
+\usepackage{fullpage}
+
+\newtheorem{lemma}{Lemma}
+\usepackage{url}
+
+\SetKwProg{Fn}{}{}{}
+
+\begin{document}
+
+
+
+%\thispagestyle{empty}
+
+%\hspace{0.11cm} \vspace{2cm}
+
+\title{
+Com S 311 Spring 2021\\
+Exam 1
+}
+
+\maketitle
+
+
+\vspace{-.8cm}
+\begin{center}
+{\bf Due:  March 9 7:59 p.m.}
+
+\smallskip
+\textbf{You must turn in a single pdf with your typed answers by 7:59.\\}
+\textbf{\\Haadi-Mohammad Majeed}
+\end{center}
+
+\medskip
+
+\section*{Guidelines}
+
+
+\begin{itemize}
+
+\item %It is important to know whether you really know. 
+For each problem, if you write  the statement ``I do not know how to solve this problem'' (and nothing else), you will receive 20\% credit for that problem. If you do write a solution, then your grade could be anywhere between 0\% to 100\%.
+To receive this 20\% credit, you must explicitly state that you do not know how to solve the problem.
+
+\item You are \textbf{not} allowed to discuss the problems with anyone. You are allowed to use the textbook and notes. Do \textbf{not} copy solutions from the internet. Your writing should demonstrate that you understand the proofs completely.
+
+\item When proofs are required, you should make them both clear and rigorous. Do not hand-waive.
+
+ \item Please submit your assignment on the given Canvas exam.
+ \begin{itemize}
+\item  You \textbf{must} type your solutions. Please submit a PDF version.
+\item Please make sure that the file you submit is not corrupted and that its size is reasonable (e.g., roughly at most 10-11 MB).
+\begin{center}
+\emph{If we cannot open your file, your exam will not be graded.}
+\end{center}
+\end{itemize}
+
+\item Any concerns about grading should be expressed within one week of
+returning the exam. 
+ 
+\end{itemize}
+
+\section*{Problems}
+
+\begin{enumerate}
+
+\item Prove or disprove the following statements \textbf{(20 points)}.
+\begin{enumerate}
+\item $4\sqrt{n} = O(n)$
+\subitem test
+\item $n = O(4\sqrt{n})$.
+\subitem test
+\end{enumerate}
+
+
+
+
+\bigskip
+
+\item Formally analyze the runtime of the following algorithm. Give the runtime in big oh notation. You must show your work. \textbf{(20 points)}
+
+\smallskip
+
+\begin{algorithm}[H]
+\Fn(){Alg1(A)}{
+\KwIn{Array of integers of length $n$}
+\SetAlgoLined
+\SetNoFillComment
+\DontPrintSemicolon
+	constant number of operations \\
+	\For{$i = n$, $i \geq 1$, $i= i /2$}{
+		
+		\For{$j = 1$, $j \leq n$, $j = j+1$}{
+			constant number of operations
+		}
+	}
+}
+\end{algorithm}
+
+
+
+\bigskip
+
+\item We are given an array $A$ of integers which is \textit{strictly increasing}, i.e., $A[i] < A[i+1]$. Give a divide-and-conquer algorithm which outputs an index $i$ such that $A[i] = i$, if one exists. If no such index exists, the algorithm outputs null. Formally analyze the runtime of your algorithm, giving a recurrence relation and a big oh bound on the runtime of your algorithm. You \textbf{must} use a divide and conquer strategy. You do not have to prove correctness. \textbf{(30 points)}
+
+\bigskip
+
+\item Using the Master Theorem, bound the runtime $T(n)$ of the following recurrence. 
+\begin{center}
+$T(n) = 2T(n/4) + 16\sqrt{n} + 1$, where $T(1) = O(1)$.
+\end{center}
+You must state which case of the Master Theorem holds, and prove that it does apply. \textbf{(20 points)}
+
+\bigskip
+
+\item Recall that a \textit{leaf node} of a heap is a node which does not have any children. An \textit{internal node} is a node which is not a leaf, i.e., a node which has at least one child. Prove that the number of leaves in an $n$-element max-heap is $\lceil n / 2 \rceil$. \textbf{(10 points)}
+
+\smallskip
+
+\textit{Hint: } Remember that every heap has an associated array with $n$ elements, starting with index $1$, such that, for every $i \in \{1,\ldots,n\}$,
+\begin{center}
+Parent$(i) = \lfloor i / 2 \rfloor$, Left$(i) = 2i$, and Right$(i) = 2i+1$.
+\end{center}
+To get started on the problem, consider $2i$ and $2i+1$ when $i > \lfloor n / 2 \rfloor$ and when $i \leq \lfloor n / 2 \rfloor$.
+\end{enumerate}
+
+
+\end{document}
