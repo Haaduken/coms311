@@ -1,7 +1,7 @@
 package edu.iastate.cs311.hw2;
 
 /**
- * @author
+ * @author Haadi Majeed
  *
  * This code template is prepared by Xiaoqiu Huang
  * You are welcome to add your own code for testing.

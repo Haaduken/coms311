@@ -1,7 +1,7 @@
 package edu.iastate.cs311.hw2;
 
 /**
- * @author 
+ * @author Haadi Majeed
  *  A simple priority queue interface and a class template implementing
  *  the interface with a heap and a heap sort algorithm. This code template is
  *  written by Xiaoqiu Huang for Com S 311 in Spring 2021.
@@ -92,8 +92,17 @@ public class Heap<E extends Comparable<? super E>>
 
   // TODO: O(log n)
   // Moves the last element up to the proper place so that the heap property holds.
-  private void percolateUp()
-  {
+  private void percolateUp() {
+    //set index for loop to be last element of the list
+    int i = list.size()-1;
+    //iterate through checking child with parents
+    while(list.get(i).compareTo(list.get((i-1)/2)) < 0){
+      //swap the elements
+      swap(i, (i-1)/2);
+      //change index to parent
+      i = (i-1)/2;
+    }
+
   }
 
   // Swaps the elements at the parent and child indexes.
@@ -120,8 +129,7 @@ public class Heap<E extends Comparable<? super E>>
       throw new NoSuchElementException();
     }
     else{
-
-      return null;
+      return list.get((list.size()-2)/2); //yeet the val of the last parent
     }
   }
 
@@ -146,7 +154,10 @@ public class Heap<E extends Comparable<? super E>>
     throw new NoSuchElementException();
   }
     else{
-
+      int index = list.indexOf(getLastInternal());
+      for(int i = list.size()-1; i > index; i--){
+        list.remove(i);
+      }
     }
   }
 
@@ -156,6 +167,15 @@ public class Heap<E extends Comparable<? super E>>
   {
     if ( start < 0 || start >= list.size() )
       throw new RuntimeException("start < 0 or >= n");
+    else if(2*start+2 < list.size() && list.get(start).compareTo(list.get(2*start+1)) > 0){
+      swap(start,2*start+1);
+      percolateDown(2*start+1);
+    }
+    else if(2*start+2 < list.size() && list.get(start).compareTo(list.get(2*start+2)) > 0){
+      swap(start,2*start+2);
+      percolateDown(2*start+2);
+    }
+
   }
 
   // Shows the tree used to implement the heap with the root element at the leftmost column
