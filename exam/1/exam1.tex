@@ -117,6 +117,27 @@ Sums to $log(n((n*c)+1))+1+c$ which can be simplified to $O(log(n^2))$
 
 \item We are given an array $A$ of integers which is \textit{strictly increasing}, i.e., $A[i] < A[i+1]$. Give a divide-and-conquer algorithm which outputs an index $i$ such that $A[i] = i$, if one exists. If no such index exists, the algorithm outputs null. Formally analyze the runtime of your algorithm, giving a recurrence relation and a big oh bound on the runtime of your algorithm. You \textbf{must} use a divide and conquer strategy. You do not have to prove correctness. \textbf{(30 points)}
 
+\begin{lstlisting}
+int binSearch(int arr[], int high, int low){
+	if(low <= high){  //runtime of C
+		int mid = (high + low) /2; //runtime of C
+		if(mid == arr[mid]){ //runtime of C
+			return mid; //runtime of C
+		}
+		else if(mid > arr[mid]){ //runtime of C
+			//runtime of n/2
+			return binSearch(arr, high, mid+1); 
+		}
+		else{
+			//runtime of n/2
+			return binSearch(arr, mid-1, low); 
+		}
+	}
+	return -1;
+}
+\end{lstlisting}
+$T(n) = \log n + 2$ for $n=2^k$\\
+$T(n) = \Theta(\log n)$ 
 \bigskip
 
 \item Using the Master Theorem, bound the runtime $T(n)$ of the following recurrence. 
@@ -124,8 +145,8 @@ Sums to $log(n((n*c)+1))+1+c$ which can be simplified to $O(log(n^2))$
 $T(n) = 2T(n/4) + 16\sqrt{n} + 1$, where $T(1) = O(1)$.
 \end{center}
 You must state which case of the Master Theorem holds, and prove that it does apply. \textbf{(20 points)}
-\\
-
+\\Case 2\\
+$a = 2\\b = 4\\f(n) = \sqrt{n}$ \hspace{10pt}  $log_4(2)=0.5 \rightarrow n^{log_4(2)}log(n)\leq n^{1/2}log(n)\\ \therefore n^{.5} \leq \omega (n^{.5}log(n))\\a*F(\frac{n}{b})\leq C*F(n)$ \hspace{3pt} Making C = 1 we get \\ $2F(\frac{n}{4})\leq n^{0.5}\\ 2F(\frac{n}{4})\leq 2 * (\frac{n}{4})^{0.5}\\ 2F(\frac{n}{4})\leq n^{0.5}\\2F(\frac{n}{4})\leq C*F(n)$\\Therefore case 2 applies and we can establish that $T(n) = \theta(n)$
 \bigskip
 
 \item Recall that a \textit{leaf node} of a heap is a node which does not have any children. An \textit{internal node} is a node which is not a leaf, i.e., a node which has at least one child. Prove that the number of leaves in an $n$-element max-heap is $\lceil n / 2 \rceil$. \textbf{(10 points)}
@@ -137,6 +158,9 @@ You must state which case of the Master Theorem holds, and prove that it does ap
 Parent$(i) = \lfloor i / 2 \rfloor$, Left$(i) = 2i$, and Right$(i) = 2i+1$.
 \end{center}
 To get started on the problem, consider $2i$ and $2i+1$ when $i > \lfloor n / 2 \rfloor$ and when $i \leq \lfloor n / 2 \rfloor$.
+\\ \\
+x = depth of tree\\
+There are $2^{x+1}-1$ nodes within the heap\\level x-1 has $2^x-1$ nodes within it\\level x has $n-2^x+1$ nodes, all are leaves here, which mean they all have parents\\ at level x-1, of the $2^{x-1} nodes \left\lceil \frac{n-2^x+1}{2}\right\rceil$ are parents and  $2^{x-1}-\left\lceil \frac{n-2^x+1}{2}\right\rceil$ are leaves
 \end{enumerate}
 
 
