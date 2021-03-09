@@ -71,9 +71,9 @@ returning the exam.
 \item Prove or disprove the following statements \textbf{(20 points)}.
 \begin{enumerate}
 \item $4\sqrt{n} = O(n)$
-\subitem test
+\subitem $\lim_{n \to \infty}\frac{f(n)}{g(n)}\rightarrow \lim_{n \to \infty}\frac{4\sqrt{n}}{n} \rightarrow 0.$ Therefore O(n) is an upper asymptotic bound for $4\sqrt{n}$ Proven.\\
 \item $n = O(4\sqrt{n})$.
-\subitem test
+\subitem $\lim_{n \to \infty}\frac{f(n)}{g(n)}\rightarrow \lim_{n \to \infty}\frac{n}{4\sqrt{n}} \rightarrow \infty.$ Therefore O(n) is an not upper asymptotic bound for $n$ Disproven.\\
 \end{enumerate}
 
 
@@ -101,8 +101,18 @@ returning the exam.
 }
 \end{algorithm}
 
-
-
+\begin{algorithm}[H]
+	\Fn(){Runtimes per line}{
+	\SetAlgoLined
+	\SetNoFillComment
+	\DontPrintSemicolon
+		c - constant operations\\
+		log(n)+1 - for loop that half's iterations\\	
+		n+1 - linear for loop\\
+		c - constant operations
+	}
+\end{algorithm}
+Sums to $log(n((n*c)+1))+1+c$ which can be simplified to $O(log(n^2))$
 \bigskip
 
 \item We are given an array $A$ of integers which is \textit{strictly increasing}, i.e., $A[i] < A[i+1]$. Give a divide-and-conquer algorithm which outputs an index $i$ such that $A[i] = i$, if one exists. If no such index exists, the algorithm outputs null. Formally analyze the runtime of your algorithm, giving a recurrence relation and a big oh bound on the runtime of your algorithm. You \textbf{must} use a divide and conquer strategy. You do not have to prove correctness. \textbf{(30 points)}
@@ -114,6 +124,7 @@ returning the exam.
 $T(n) = 2T(n/4) + 16\sqrt{n} + 1$, where $T(1) = O(1)$.
 \end{center}
 You must state which case of the Master Theorem holds, and prove that it does apply. \textbf{(20 points)}
+\\
 
 \bigskip
 
