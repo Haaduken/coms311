@@ -146,8 +146,15 @@ and red cookies, respectively. As output, the algorithm should state whether Ril
 winning strategy for either player.\\
 \newpage
 \begin{lstlisting}
+cookie(int n, int m){
+    int smaller;
+    if(m<n)smaller = m;
+    else if(n<m)smaller = n;
+    else smaller = -1;
+    
+}
 \end{lstlisting}
-
+\newpage
 (3) The Constrained LCS Problem\medskip
 
 Let $X$ and $Y$ be strings over an alphabet $\Sigma$. For $\Gamma\subseteq \Sigma$ we define the \emph{$\Gamma$-constrained longest common subsequence } of $X$ and $Y$ to be a longest common subsequence of $X$ and $Y$ that does NOT 
@@ -156,7 +163,9 @@ contain any of the characters in $\Gamma$.\medskip
 Give a detailed proof that the problem of finding a constrained longest common subsequence exhibits optimal substructure.\\
 \newpage
 \begin{lstlisting}
+
 \end{lstlisting}
+\newpage
 (4) Minimum Spanning Trees\medskip
 
 Let $G=(V,E)$ be a connected and undirected graph with a weight function $c\colon E \to \mathbb{R}$. \medskip

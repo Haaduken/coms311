@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.13)  24 MAR 2021 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.13)  24 MAR 2021 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -311,24 +311,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--147
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 151.
+ (c:/texlive/2020/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 151.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[4] [5] (c:/Users/haadi/repos/311coms/hw/3/hw3-1.aux) ) 
+[5] [6] (c:/Users/haadi/repos/311coms/hw/3/hw3-1.aux) ) 
 Here is how much of TeX's memory you used:
- 6064 strings out of 479302
- 83291 string characters out of 5871198
+ 6081 strings out of 479302
+ 83571 string characters out of 5871198
  381297 words of memory out of 5000000
- 23029 multiletter control sequences out of 15000+600000
+ 23043 multiletter control sequences out of 15000+600000
  412395 words of font info for 64 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 83i,4n,88p,351b,1222s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,4n,88p,351b,1225s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf (5 pages, 119543 bytes).
+Output written on c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf (6 pages, 120353 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
