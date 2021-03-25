@@ -53,6 +53,7 @@ Homework 3
 \smallskip
 {\bf Late Submission Due: April 3, 11:59 \textbf{A.M.} (25\% penalty)\\
 (submissions after this deadline will not be graded)}
+\textbf{\\Haadi-Mohammad Majeed}
 \end{center}
 
 \medskip
@@ -112,6 +113,21 @@ As output, the algorithm should state "NO" when moving from floor $i$ to floor $
 algorithm should output (i) a shortest sequence of integers describing the buttons pressed to move the elevator from floor
 $i$ to floor $j$, and (ii) the number of such sequences.
 
+\newpage
+\begin{lstlisting}
+floorSeq(int i, int j, int n, int b[]){
+    int shortest[b.size()];
+    int possibilities = 0;
+    int distance = j - i;
+    if(distance == 0){
+        shortest[0] = 0;
+        possibilities = 1;
+        return shortest, possibilities;
+    }
+
+
+}
+\end{lstlisting}
 
 \newpage
 
@@ -128,7 +144,9 @@ give a brief justification of the correctness of your algorithm, and analyze its
 Your algorithm's input parameters should include $n, m \in \mathbb{N}_0$ representing the given numbers of green 
 and red cookies, respectively. As output, the algorithm should state whether Riley or Morgan will win, or if there is no
 winning strategy for either player.\\
-
+\newpage
+\begin{lstlisting}
+\end{lstlisting}
 
 (3) The Constrained LCS Problem\medskip
 
@@ -136,7 +154,9 @@ Let $X$ and $Y$ be strings over an alphabet $\Sigma$. For $\Gamma\subseteq \Sigm
 contain any of the characters in $\Gamma$.\medskip
 
 Give a detailed proof that the problem of finding a constrained longest common subsequence exhibits optimal substructure.\\
-
+\newpage
+\begin{lstlisting}
+\end{lstlisting}
 (4) Minimum Spanning Trees\medskip
 
 Let $G=(V,E)$ be a connected and undirected graph with a weight function $c\colon E \to \mathbb{R}$. \medskip
@@ -144,7 +164,9 @@ Let $G=(V,E)$ be a connected and undirected graph with a weight function $c\colo
 Given an arbitrary vertex $v\in V$, is it true that an edge incident to $v$ with the least weight always belongs to some minimum spanning tree of $G$?\medskip
 
 Give a thorough proof showing the correctness of your answer. 
-
+\newpage
+\begin{lstlisting}
+\end{lstlisting}
 
 
 
