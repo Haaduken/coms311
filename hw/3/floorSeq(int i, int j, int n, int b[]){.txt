@@ -1,0 +1,12 @@
+floorSeq(int i, int j, int n, int b[]){
+    int shortest[b.size()];
+    int possibilities = 0;
+    int distance = j - i;
+    if(distance == 0){
+        shortest[0] = 0;
+        possibilities = 1;
+        return shortest, possibilities;
+    }
+
+
+}
