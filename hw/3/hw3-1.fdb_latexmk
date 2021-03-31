@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1617133345 "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" "c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf" "hw3-1" 1617133346
-  "c:/Users/haadi/repos/311coms/hw/3/hw3-1.aux" 1617133346 427 fbffc616244cf97811ebe9da838d8bb1 ""
-  "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" 1617133344 6840 8726c2de3c26c5f3e4658bb0418b865c ""
+["pdflatex"] 1617221234 "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" "c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf" "hw3-1" 1617221236
+  "c:/Users/haadi/repos/311coms/hw/3/hw3-1.aux" 1617221236 427 fbffc616244cf97811ebe9da838d8bb1 ""
+  "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" 1617221232 6894 53ea1cfb1656b2a5604c839273815cce ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1613253009 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1613253988 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1613253579 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -88,11 +88,11 @@
   "c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1613257937 5211899 7e5f44963a72b7e1a2e8e6ad702159ca ""
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1613258225 2568202 eefefaa184d4d5a83dba349fb8336e88 ""
   "c:/texlive/2020/texmf.cnf" 1613257913 713 e69b156964470283e0530f5060668171 ""
-  "hw3-1.aux" 1617133346 427 fbffc616244cf97811ebe9da838d8bb1 "pdflatex"
-  "hw3-1.tex" 1617133344 6840 8726c2de3c26c5f3e4658bb0418b865c ""
+  "hw3-1.aux" 1617221236 427 fbffc616244cf97811ebe9da838d8bb1 "pdflatex"
+  "hw3-1.tex" 1617221232 6894 53ea1cfb1656b2a5604c839273815cce ""
   (generated)
-  "hw3-1.pdf"
-  "c:/Users/haadi/repos/311coms/hw/3/hw3-1.log"
-  "hw3-1.aux"
   "c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf"
+  "c:/Users/haadi/repos/311coms/hw/3/hw3-1.log"
+  "hw3-1.pdf"
   "hw3-1.log"
+  "hw3-1.aux"

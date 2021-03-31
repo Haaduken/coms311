@@ -1,0 +1,25 @@
+2
+    Bottom up approach
+    0-m
+    0-n
+
+    store depth of moves in the index of a 2d matrix
+
+    ex
+    3 of m, 3 of n would be 2 moves from a win
+    how far from last move - depth is distance from win
+
+    index 3,3 -> 2 moves remaining
+    last index of [m][n] if even, A wins, if odd, B wins
+
+    set index to [infinity] b/c if at end if the index is infinity, there is no winning strat
+    runtime of O(m*n)
+    
+1
+    runtime of O(2N*B)
+
+3
+    pg 392 in tb
+
+4
+    pg 624
