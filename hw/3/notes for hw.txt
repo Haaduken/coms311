@@ -1,7 +1,7 @@
 2
     Bottom up approach
-    0-m
-    0-n
+    0->m
+    0->n
 
     store depth of moves in the index of a 2d matrix
 
@@ -12,7 +12,7 @@
     index 3,3 -> 2 moves remaining
     last index of [m][n] if even, A wins, if odd, B wins
 
-    set index to [infinity] b/c if at end if the index is infinity, there is no winning strat
+    set [index] to -1 b/c if at the end and the index is -1, there is no winning strat
     runtime of O(m*n)
     
 1

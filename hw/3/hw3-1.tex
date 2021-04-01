@@ -116,17 +116,29 @@ $i$ to floor $j$, and (ii) the number of such sequences.
 \newpage
 \begin{lstlisting}
 floorSeq(int i, int j, int n, int b[]){
-    int shortest[b.size()];
-    int possibilities = 0;
-    int distance = j - i;
-    if(distance == 0){
-        shortest[0] = 0;
-        possibilities = 1;
-        return shortest, possibilities;
-    }
-    
+    count = 0
+    arr[] = empty arr
+    if(i == j) 
+        return count, arr
+    return recur(i, j, n, b, count, arr)
+}
+
+recur(int i, int j, int n, int b[], int count, int arr[]){
+    if(i == j) 
+        return ++count, arr
+    out = "no"
+    if(floor.visited(i) || i > n || i < 1) 
+        return out
+    else 
+        floor.add(i) //a set of all floors visited
+    for(k->b.length)
+        out = recur(i+b[k], j, n, b, count, arr + b[k]) 
+        //increment i for the next call, and add the 
+        //element in b[k] to the end of arr
+    return out    
 }
 \end{lstlisting}
+This follows a bottom up approach fro every possible floor N, with every possible button B given to the method. Subsequently this results in a runtime of O(N*B).
 \newpage
 
 (2) The Cookie Game\medskip
@@ -142,28 +154,48 @@ give a brief justification of the correctness of your algorithm, and analyze its
 Your algorithm's input parameters should include $n, m \in \mathbb{N}_0$ representing the given numbers of green 
 and red cookies, respectively. As output, the algorithm should state whether Riley or Morgan will win, or if there is no
 winning strategy for either player.\\
-\newpage
 \begin{lstlisting}
 cookie(int n, int m){
-    if(m <= 1 || n <= 1){
-        return 0;
-    }
-    int smaller;
-    if(m<n)smaller = m;
-    else if(n<m)smaller = n;
-    else smaller = -1;
-    
+    Let arr[1->m][1->n] 2d array
+    for(i->m)
+        for(j->n)
+            arr[m][n] = CalculateDepth(i,j) 
+            //This is a O(1) runtime helper method that returns the 
+            //depth at the location, otherwise a -1
+    if(arr[m][n] == -1) return "No Winner"
+    if(arr[m][n] is even) return "Morgan Wins"
+    return "Riley Wins"
 }
 \end{lstlisting}
+Bottom up approach\\
+0$\rightarrow m$\\
+0$\rightarrow n$
+\\
+Store depth of moves in the index of a 2d matrix
+\\
+Example
+3 of m, 3 of n would be 2 moves from a win
+How far from last move - depth is distance from win
+\\
+Index $3, 3 \rightarrow 2$ moves remaining
+Last index of [m][n] if even, A wins, if odd, B wins
+\\
+Set [index] to -1 b/c if at the end and the index is -1, there is no winning strat
+Runtime of O(m*n)
+it has such a run time since it iterates through the for loops n times m times, resulting in m*n, with every other line being a constant runtime of O(1). Inside the second for loop a helper method is called to assist in determining the depth from the win, yet it will return -1 if the game is determined to be unwinnable from either party. This method runs in O(1) which also assists in the overall runtime being O(M*N)
 \newpage
 (3) The Constrained LCS Problem\medskip
 
 Let $X$ and $Y$ be strings over an alphabet $\Sigma$. For $\Gamma\subseteq \Sigma$ we define the \emph{$\Gamma$-constrained longest common subsequence } of $X$ and $Y$ to be a longest common subsequence of $X$ and $Y$ that does NOT 
 contain any of the characters in $\Gamma$.\medskip
 
-Give a detailed proof that the problem of finding a constrained longest common subsequence exhibits optimal substructure.\\
+Give a detailed proof that the problem of finding a constrained longest common subsequence exhibits optimal substructure.\\\\
+1) $x_m = y_n \rightarrow$ then $\Gamma_k = x_m = y_n$ and $\Gamma_{k-1}$ is a constrained Longest Common Subsequence of $x_{m-1} = y_{n-1}$
 \\
-1) X = Y $\rightarrow$ therefore  
+2) $x_m \neq y_n \rightarrow$ then $\Gamma_k \neq x_m$ and implies that $\Gamma$ is a constrained Longest Common Subsequence of $x_{m-1} = y$
+\\
+3) $x_m \neq y_n \rightarrow$ then $\Gamma_k \neq y_n$ and implies that $\Gamma$ is a constrained Longest Common Subsequence of $x_m = y{n-1}$
+\\
 \newpage
 (4) Minimum Spanning Trees\medskip
 
@@ -172,9 +204,8 @@ Let $G=(V,E)$ be a connected and undirected graph with a weight function $c\colo
 Given an arbitrary vertex $v\in V$, is it true that an edge incident to $v$ with the least weight always belongs to some minimum spanning tree of $G$?\medskip
 
 Give a thorough proof showing the correctness of your answer. 
-\newpage
-\begin{lstlisting}
-\end{lstlisting}
+\\\\
+Graph theory states that a vertex is incident to the edge of the vertex if one of the two verticies the edge connects. An incidence is a pair where it is a vertex and in an edge incident. Two edges are labeled as incident if they have a common vertex.\\Proof via Contradiction\\Edge V connected to least weighted [w] edge dictated by (u,v)\\Assuming (u,v) does not belong to a min weight spanning tree, but there is a solution from u and v that does not utilise the edge. 
 
 
 
