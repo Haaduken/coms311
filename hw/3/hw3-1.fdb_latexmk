@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1617221234 "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" "c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf" "hw3-1" 1617221236
+["pdflatex"] 1617221234 "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" "c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf" "hw3-1" 1617230569
   "c:/Users/haadi/repos/311coms/hw/3/hw3-1.aux" 1617221236 427 fbffc616244cf97811ebe9da838d8bb1 ""
   "c:/Users/haadi/repos/311coms/hw/3/hw3-1.tex" 1617221232 6894 53ea1cfb1656b2a5604c839273815cce ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1613253009 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -91,8 +91,8 @@
   "hw3-1.aux" 1617221236 427 fbffc616244cf97811ebe9da838d8bb1 "pdflatex"
   "hw3-1.tex" 1617221232 6894 53ea1cfb1656b2a5604c839273815cce ""
   (generated)
+  "hw3-1.log"
+  "hw3-1.pdf"
+  "hw3-1.aux"
   "c:/Users/haadi/repos/311coms/hw/3/hw3-1.pdf"
   "c:/Users/haadi/repos/311coms/hw/3/hw3-1.log"
-  "hw3-1.pdf"
-  "hw3-1.log"
-  "hw3-1.aux"
