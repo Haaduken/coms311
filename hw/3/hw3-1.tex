@@ -138,7 +138,7 @@ recur(int i, int j, int n, int b[], int count, int arr[]){
     return out    
 }
 \end{lstlisting}
-This follows a bottom up approach fro every possible floor N, with every possible button B given to the method. Subsequently this results in a runtime of O(N*B).
+This follows a bottom up approach fro every possible floor N, with every possible button B given to the method. Subsequently this results in a runtime of O(N*B) as it hits every B values N times to determine the route
 \newpage
 
 (2) The Cookie Game\medskip
@@ -198,7 +198,17 @@ Give a detailed proof that the problem of finding a constrained longest common s
 \\\\
 1)
 Contradiction\\
-Establishing that $\Gamma \neq X_M$ we can 
+Establishing that $\Gamma \neq X_M$, add $x_m = y_n$ to $\Gamma$ and a constrained LCS if X and Y is formed with a length of $\Gamma$'s k + 1. This counters the theory that $\Gamma$ of size k is the LCS and must therefore have to be $\Gamma_k = x_m = y_n$\\ABCD, as an example, is the Constrained LCS of $x_{m-1} = y_{n-1}$ with n and m $>$ k-1. The current $\Gamma$ now produces a common subsequence of x and y, but yields a length greater than k which now contradicts the theory(1).
+\\\\
+2)
+Contradiction\\
+ABCD is once again the constrained LCS but now for $x_{m-1} = y$ with the new CS lengths being greater than K, it is once again contradicts the inital theory(2).
+\\\\
+3)
+Contradiction\\
+if $x_m \neq y_n$ then contradiciton would allow for ABCD to be the constrained LCS of $x = y_{n-1}$ with length greater than k. This follows similar logic to (2)
+\\\\
+Optimial substructure is shown here as the inital problem has been broken up into multiple parts and then solving them indivudally. 
 \newpage
 (4) Minimum Spanning Trees\medskip
 
@@ -207,9 +217,10 @@ Let $G=(V,E)$ be a connected and undirected graph with a weight function $c\colo
 Given an arbitrary vertex $v\in V$, is it true that an edge incident to $v$ with the least weight always belongs to some minimum spanning tree of $G$?\medskip
 
 Give a thorough proof showing the correctness of your answer. 
-\\\\
-Graph theory states that a vertex is incident to the edge of the vertex if one of the two verticies the edge connects. An incidence is a pair where it is a vertex and in an edge incident. Two edges are labeled as incident if they have a common vertex.\\Proof via Contradiction\\Edge V connected to least weighted [w] edge dictated by (u,v)\\Assuming (u,v) does not belong to a min weight spanning tree, but there is a solution from u and v that does not utilise the edge.
-
+\\\\\\
+Graph theory states that a vertex is incident to the edge of the vertex if one of the two verticies the edge connects. An incidence is a pair where it is a vertex and in an edge incident. Two edges are labeled as incident if they have a common vertex.\\Proof via Contradiction\\Edge V connected to least weighted [w] edge dictated by (u,v)\\Assuming (u,v) does not belong to a min weight spanning tree, there is a solution from u and v that does not utilise this edge. With this new edge, the highest valued, edge should be removed and the new edge and node attatched. Due to the connectivity property, the tree should be reformed with a new path. therefore re-establishing a minimum spanning tree. \\The weight of the tree can be calculated with \\
+weight of original tree - (weight of original tree - weight of removed edge - weight of new edge)\\
+This result cannot be negative since the new branch should be lighter than the removed one. $\therefore$ the new tree weighs less than the original. This proves that given an arbitraty vertex v $\epsilon $ V is incident with (u,v) with graph G.
 
 
 \end{document}
