@@ -1,0 +1,119 @@
+%\documentstyle [12pt]{article}
+\documentclass[12pt]{article}
+\def\baselinestretch{1.0}
+\textwidth=6.0in
+\textheight=8.5in
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+% \usetheme{default}
+% \usepackage{comment}
+% \usepackage{mathtools}
+% \usepackage{amsmath}
+% \usepackage{amsmath}
+% \newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+% \usepackage[utf8]{inputenc}
+% \usepackage[english]{babel}
+% \newtheorem{theorem}{Theorem}
+% \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+% \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+% \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+\begin{document}
+
+\pagestyle{plain}
+
+\begin{center}
+{\bf Com S 311 Spring 2021 \\}
+{\Large \bf Assignment 4: Single-Source Shortest Paths and NP-Completeness \\}
+{\bf Due: April 16, 11:59 pm \\}
+{\bf Early Submission: April 15, 11:59 p.m. (5\% bonus) \\}
+{\bf Late Submission: April 17, 11:59 A.M. (25\% penalty) }
+\end{center}
+
+\section*{\large Guidelines}
+
+\begin{itemize}
+
+\item %It is important to know whether you really know.
+For each problem, if you write  the statement ``I do not know how to solve this problem'' (and nothing else), you will receive 20\% credit for that problem. If you do write a solution, then your grade could be anywhere between 0\% to 100\%.
+To receive this 20\% credit, you must explicitly state that you do not know how to solve the problem.
+
+\item You are allowed to discuss with classmates, but you must work on the homework problems on your own.  You should write the final solutions alone, without consulting anyone. Your writing should demonstrate that you understand the proofs completely.
+
+\item When proofs are required, you should make them both clear and rigorous. Do not hand-waive.
+
+ \item Please submit your assignment via Canvas.
+ \begin{itemize}
+\item  You \textbf{must} type your solutions. Please submit a PDF version.
+\item Please make sure that the file you submit is not corrupted and that its size is reasonable (e.g., roughly at most 10-11 MB).
+\begin{center}
+\emph{If we cannot open your file, your homework will not be graded.}
+\end{center}
+\end{itemize}
+
+\item Any concerns about grading should be expressed within one week of
+returning the homework.
+
+\end{itemize}
+
+\section*{Problem 1}
+
+Consider a virtual directed acyclic grid graph with its set of vertices and set of edges
+defined as follows. Let $m$ and $n$ be two positive integers.
+Each vertex in the graph is of the form $(i, j)$,
+with $i = 1, 2, ..., m$ and $j = 1, 2, ..., n$, where vertex $(i, j)$
+is in row $i$ and column $j$. The number of vertices in the graph is $mn$.
+For each $i = 1, 2, ..., m$, row $i$ consists of 
+vertices $(i, j)$ with $j = 1, 2, ..., n$.
+For each $j = 1, 2, ..., n$, column $j$
+consists of vertices $(i, j)$ with $i = 1, 2, ..., m$.
+The graph contains three types of directed edges: horizontal edges, vertical edges
+and diagonal edges. For each $i = 1, 2, ..., m$ and each $j = 2, 3, ..., n$,
+there is a directed horizontal edge from vertex $(i, j-1)$ to vertex $(i, j)$ with a weight of $w(1, j)$.
+For each $i = 2, 3, ..., m$ and each $j = 1, 2, ..., n$,
+there is a directed vertical edge from vertex $(i-1, j)$ to vertex $(i, j)$ with a weight of $w(i, 1)$.
+For each $i = 2, 3, ..., m$ and each $j = 2, 3, ..., n$,
+there is a directed diagonal edge from vertex $(i-1, j-1)$ to vertex $(i, j)$
+with a weight of $w(i, j)$.
+Note that some weights in the weight matrix $w$ are negative,
+while other weights are non-negative.
+
+For each $i = 1, 2, ..., m$ and $j = 1, 2, ..., n$,
+define $S(i, j)$ to be the maximum weight of all paths from the source vertex $(1, 1)$
+to a target vertex $(i, j)$, where the weight of a path from $(1, 1)$
+to $(i, j)$ is the sum of weights of each edge in the path.
+Develop and justify a formula for computing the matrix $S$.
+Design and analyze an algorithm with a running time of $O(mn)$
+for computing a maximum-weight path from $(1, 1)$ to $(m, n)$.
+The input to the algorithm is a weight matrix $w$ of $m$ rows and $n$ columns. 
+You need to express the algorithm in pseudocode and to determine its running time.
+Note that there is no need to build this grid graph. But it is helpful
+to carry out the computation in order of rows or in order of columns of this virtual grid graph. 
+Below an example weight matrix $w$ of $4$ rows and $5$ columns.
+A maximum-weight path is $<(1, 1), (1, 2), (2, 3), (3, 3), (4, 4), (4, 5)>$
+with a weight of $(-2) + 8 + (-1) + 9 + (-3) = 11$.
+Note that $w(3, 1) = -1$ is the weight of the edge from vertex $(2, 3)$ to vertex $(3, 3)$
+and  that $w(1, 5) = -3$ is the weight of the edge from vertex $(4, 4)$ to vertex $(4, 5)$.
+
+$$
+\begin{bmatrix} 
+0  & -2 & -4 & -8 & -3 \\
+-2 & -5 & 8  & -5 & 2  \\
+-1 & 1  & 2  &  2 & 3  \\
+-4 & 2  & 3  &  9 & 1  \\
+\end{bmatrix}
+\quad
+$$
+
+\section*{Problem 2}
+Prove that $P$ is closed under the star operation by dynamic programming.
+
+\section*{Problem 3}
+A \emph{triangle} in an undirected graph $G $ is defined to be a 3-clique (i.e., three vertices in $G$ that are pairwise connected by edges)
+and $3-ANGLE := \{ \langle G \rangle \mid G \mbox{ contains a triangle }\}$. Prove that $3-ANGLE \in P$. 
+
+\section*{Problem 4}
+Prove that if $P = NP$, then we can factor integers in polynomial time.
+
+
+\end{document}
