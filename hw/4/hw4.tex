@@ -28,6 +28,8 @@
 {\bf Due: April 16, 11:59 pm \\}
 {\bf Early Submission: April 15, 11:59 p.m. (5\% bonus) \\}
 {\bf Late Submission: April 17, 11:59 A.M. (25\% penalty) }
+\textbf{\\Haadi-Mohammad Majeed\\Collaborated with Nathan Tucker and Matthew Hoskins} 
+
 \end{center}
 
 \section*{\large Guidelines}
@@ -104,14 +106,20 @@ $$
 \end{bmatrix}
 \quad
 $$
+\\
 
+\newpage
 \section*{Problem 2}
 Prove that $P$ is closed under the star operation by dynamic programming.
+\\\\
 
+\newpage
 \section*{Problem 3}
 A \emph{triangle} in an undirected graph $G $ is defined to be a 3-clique (i.e., three vertices in $G$ that are pairwise connected by edges)
 and $3-ANGLE := \{ \langle G \rangle \mid G \mbox{ contains a triangle }\}$. Prove that $3-ANGLE \in P$. 
-
+\\\\
+G is an undirected graph with r-clique. r is the size of said clique\\ triangle has an r value of 3 here. We also have the graph $G=(V,E)$ where V is the vertices, E is the edges and G is the graph. \\n = |V| (num vertices)\\m = |E| (num edges)\\Enumerating the triplet (x,y,z) where $x,y,z\epsilon V$ \\If G contains the edges of the triangle that has $(x,y), (y,z), and (x,z)$ are edges within G, then return true, if not then return false.\\There are $\binom{n}{3} = \Theta (n^3)$ triplets that can be formed from the vertices within G. These triplets can be enumerated within O($n^3$) time and to check if all the edges of a triplet belong to set E will take O(m) time\\The total time with both attributes together will take $O(n^3*m) or O(|V|^3*|E|)$ which is polynomial, therefore $3-ANGLE \epsilon P$
+\newpage
 \section*{Problem 4}
 Prove that if $P = NP$, then we can factor integers in polynomial time.
 
