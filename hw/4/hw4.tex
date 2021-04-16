@@ -66,7 +66,7 @@ To receive this 20\% credit, you must explicitly state that you do not know how 
 returning the homework.
 
 \end{itemize}
-
+\newpage
 \section*{Problem 1}
 
 Consider a virtual directed acyclic grid graph with its set of vertices and set of edges
@@ -116,16 +116,41 @@ $$
 \quad
 $$
 \\\\
-
-\newpage
+\begin{algorithm}[H]
+    \Fn(){ShortestPathMostWeight}{
+    \KwIn{2D Matrix $x$}
+    \SetAlgoLined
+    \SetNoFillComment
+    \DontPrintSemicolon
+    m = x.length\\
+    n = x.height\\
+    Table T is a new matrix T[m][n]\\
+    for(i $\rightarrow$ m){//runtime loop of m\\ 
+        \hspace{.5cm}for(j $\rightarrow$ n){//runtime loop of n\\
+            \hspace{1cm}T[i][j] = x[i][j]\\
+            \hspace{1cm}if(i == 0 and j $>$ 0){\\
+                \hspace{1.5cm}T[0][j] += T[0][j-1]\\
+            }
+            \hspace{1cm}else if(j == 0 and i $>$ 0){\\
+                \hspace{1.5cm}T[i][0] += T[i-1][0]\\
+            }
+            \hspace{1cm}else if(j $>$ 0 and i $>$ 0){\\
+            \hspace{1.5cm}T[i][j] += T[i-1][j-1]\\
+            }
+            \hspace{1cm}T[i][j] += max(T[i-1][j], T[i][j-1], T[i-1][j-1])\\
+        }
+    }
+    return T[m - 1][n - 1];
+    }
+\end{algorithm}
+This algorithm runs in the time of $O(M*N)$ as it iterates through the height (n) and width (m) of the input matrix to determine the best path to take.
+\bigskip
 \section*{Problem 2}
 Prove that $P$ is closed under the star operation by dynamic programming.
 \\\\
-P is a class of langauge in polynomial time such that $P=\bigcup_k TIME(n^k)$\\To prove P is closed under the star operation, $A\epsilon P$. Now to decide A*\\
+P is a class of langauge in polynomial time such that $P=\bigcup_k TIME(n^k)$\\To prove P is closed under the star operation, $L\epsilon P$. Now to decide L*\\
 \\
-if $y = \\varepsilon, output ACCEPT and end$\\
-Table[i,j] = 0 for i = $i \leq j$\\
-for i = 1 to n \\\hspace{40 pt} run M on $y_i \epsilon L$ if  then set T[i, i] = 1.\\
+
 \begin{algorithm}[H]
     \Fn(){L*}{
     \KwIn{y}
@@ -134,22 +159,22 @@ for i = 1 to n \\\hspace{40 pt} run M on $y_i \epsilon L$ if  then set T[i, i] =
     \DontPrintSemicolon
     M = Assume input y = $y_1y_2 ... y_n \epsilon \Sigma$\\
         if ($y = \varepsilon$){\\
-            \hspace{0.5cm}output ACCEPT and end\\
+            \hspace{0.5cm}return ACCEPT \\
         } 
         table T[i,j] for i $\leq$ j\\
-        for(i=1 $->$ n){\\
+        for(i=1 $\rightarrow$ n){\\
             \hspace{0.5cm}run M on $y_i$\\
             \hspace{0.5cm}if($y_i \epsilon L$){\\
                 \hspace{1cm}T[i,i] = 1\\
             }
         }
-        for(k=2 $->$ n){\\
-            \hspace{0.5cm}for(i = 1 $->$ n-k+1){\\
+        for(k=2 $\rightarrow$ n){\\
+            \hspace{0.5cm}for(i = 1 $\rightarrow$ n-k+1){\\
                 \hspace{1cm}j = i + k -1\\
                 \hspace{1cm}run m on $y_i ... y_j$\\
                 \hspace{1cm}if($y_i ... y_j \epsilon L$){\\
                     \hspace{1.5cm}T[i,j] = 1\\}
-                \hspace{1cm}for(l = i $->$ j-1){\\
+                \hspace{1cm}for(l = i $\rightarrow$ j-1){\\
                     \hspace{1.5cm}if(T[i,1] == 1 and T[1,j] == 1){\\
                         \hspace{2cm}T[i,j] = 1\\
                     }
@@ -157,14 +182,15 @@ for i = 1 to n \\\hspace{40 pt} run M on $y_i \epsilon L$ if  then set T[i, i] =
             }
         }
         if(T[1,n == 1]){\\
-            \hspace{0.5cm} output ACCEPT \\
+            \hspace{0.5cm}return ACCEPT \\
         }
         else{\\
-            \hspace{0.5cm} output REJECT
+            \hspace{0.5cm}return REJECT
         }
     }
     \end{algorithm}
-\newpage
+    This algorithm is a polynomial time algo, and thus P is closed under star operation. 
+\bigskip
 \section*{Problem 3}
 A \emph{triangle} in an undirected graph $G $ is defined to be a 3-clique (i.e., three vertices in $G$ that are pairwise connected by edges)
 and $3-ANGLE := \{ \langle G \rangle \mid G \mbox{ contains a triangle }\}$. Prove that $3-ANGLE \in P$. 
@@ -188,9 +214,11 @@ and $3-ANGLE := \{ \langle G \rangle \mid G \mbox{ contains a triangle }\}$. Pro
     }
     }
     \end{algorithm}
-\newpage
+    With this, we have created algorithm that can find a triangle within the polynomial time of $3 - ANGLE$  $\epsilon$  $P$
+    N is the matrix M times itself, and with that we iterate through N's height and width to determine if any of the verticies at the same point are zero, if they are then we check for neighbor verticies within M and N again
+\bigskip
 \section*{Problem 4}
 Prove that if $P = NP$, then we can factor integers in polynomial time.
 \\\\
-Consider L={$\left\langle n,a,b\right\rangle$ |n has a factor p in the range of $a \leq p \leq b$}\\L is within NP because the factor can be the certificate.\\Since we assume P=NP, there is a polynomial algorithm\\By repeating the algorithm, we can halve the search space each time by determining if there is a factor within the range of $(a, a+b/2)$. If there is not, that means there is a factor in the other range. \\The number of times the algo has applied would equate to $log(n)$ or $O(k)$ where k is the number of bits of n. So a polynomial number of applications will isolate this down to one factor.\\With a ceiling of O(k)factors, we can find all factors in polynomial time.
+We define as the following: \\L={$\left\langle n,a,b\right\rangle$ |n has a factor p in the range of $a \leq p \leq b$}\\L is within NP because the factor can be the certificate.\\Since we assume P=NP, there is a polynomial algorithm\\By repeating the algorithm, we can halve the search space each time by determining if there is a factor within the range of $(a, a+b/2)$. If there is not, that means there is a factor in the other range. \\The number of times the algo has applied would equate to $log(n)$ or $O(k)$ where k is the number of bits of n. So a polynomial number of applications will isolate this down to one factor.\\With a ceiling of O(k)factors, we can find all factors in polynomial time.
 \end{document}
