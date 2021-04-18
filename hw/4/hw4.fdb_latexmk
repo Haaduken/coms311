@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1618540863 "c:/Users/haadi/repos/311coms/hw/4/hw4.tex" "c:/Users/haadi/repos/311coms/hw/4/hw4.pdf" "hw4" 1618540864
+["pdflatex"] 1618540863 "c:/Users/haadi/repos/311coms/hw/4/hw4.tex" "c:/Users/haadi/repos/311coms/hw/4/hw4.pdf" "hw4" 1618628616
   "c:/Users/haadi/repos/311coms/hw/4/hw4.aux" 1618540864 69 b9564f5832ca1e521a55fe574d972060 ""
   "c:/Users/haadi/repos/311coms/hw/4/hw4.tex" 1618540861 9725 9f773043f6810b943ec1f116b3ab8760 ""
   "c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1613359528 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -83,8 +83,8 @@
   "hw4.aux" 1618540864 69 b9564f5832ca1e521a55fe574d972060 "pdflatex"
   "hw4.tex" 1618540861 9725 9f773043f6810b943ec1f116b3ab8760 ""
   (generated)
-  "c:/Users/haadi/repos/311coms/hw/4/hw4.pdf"
-  "hw4.log"
-  "hw4.pdf"
   "c:/Users/haadi/repos/311coms/hw/4/hw4.log"
   "hw4.aux"
+  "c:/Users/haadi/repos/311coms/hw/4/hw4.pdf"
+  "hw4.pdf"
+  "hw4.log"
