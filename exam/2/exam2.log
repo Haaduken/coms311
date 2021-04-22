@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.13)  22 APR 2021 02:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.14)  22 APR 2021 03:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,146 +294,146 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count295
  [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 <1a.png, id=12, 936.49875pt x 441.14813pt>
 File: 1a.png Graphic file (type png)
 <use 1a.png>
-Package pdftex.def Info: 1a.png  used on input line 79.
+Package pdftex.def Info: 1a.png  used on input line 80.
 (pdftex.def)             Requested size: 469.75502pt x 221.28705pt.
 <1b.png, id=13, 520.94624pt x 85.06781pt>
 File: 1b.png Graphic file (type png)
 <use 1b.png>
-Package pdftex.def Info: 1b.png  used on input line 88.
+Package pdftex.def Info: 1b.png  used on input line 89.
 (pdftex.def)             Requested size: 469.75502pt x 76.70958pt.
 [2 <c:/Users/haadi/repos/311coms/exam/2/1a.png> <c:/Users/haadi/repos/311coms/exam/2/1b.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 <SP.pdf, id=20, 538.01pt x 413.545pt>
 File: SP.pdf Graphic file (type pdf)
 <use SP.pdf>
-Package pdftex.def Info: SP.pdf  used on input line 109.
+Package pdftex.def Info: SP.pdf  used on input line 110.
 (pdftex.def)             Requested size: 170.71652pt x 131.22018pt.
 <2a.png, id=21, 772.38562pt x 273.27094pt>
 File: 2a.png Graphic file (type png)
 <use 2a.png>
-Package pdftex.def Info: 2a.png  used on input line 117.
+Package pdftex.def Info: 2a.png  used on input line 118.
 (pdftex.def)             Requested size: 312.9803pt x 110.73248pt.
 [3 <c:/Users/haadi/repos/311coms/exam/2/SP.pdf> <c:/Users/haadi/repos/311coms/exam/2/2a.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 <2b.png, id=36, 436.63126pt x 327.47343pt>
 File: 2b.png Graphic file (type png)
 <use 2b.png>
-Package pdftex.def Info: 2b.png  used on input line 127.
+Package pdftex.def Info: 2b.png  used on input line 128.
 (pdftex.def)             Requested size: 312.9803pt x 234.73636pt.
 [4 <c:/Users/haadi/repos/311coms/exam/2/2b.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--159
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
 [8] (c:/Users/haadi/repos/311coms/exam/2/exam2.aux) ) 
 Here is how much of TeX's memory you used:
- 5835 strings out of 479302
- 81575 string characters out of 5871198
- 379830 words of memory out of 5000000
- 22802 multiletter control sequences out of 15000+600000
+ 5835 strings out of 481207
+ 81575 string characters out of 5914969
+ 374984 words of memory out of 5000000
+ 22557 multiletter control sequences out of 15000+600000
  412062 words of font info for 63 fonts, out of 8000000 for 9000
- 1302 hyphenation exceptions out of 8191
+ 197 hyphenation exceptions out of 8191
  83i,12n,88p,960b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on c:/Users/haadi/repos/311coms/exam/2/exam2.pdf (8 pages, 268359 bytes).
+Output written on c:/Users/haadi/repos/311coms/exam/2/exam2.pdf (8 pages, 268827 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
