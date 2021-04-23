@@ -35,7 +35,7 @@ Exam 2
 
 \smallskip
 \textbf{You must turn in a single pdf with your typed answers by 7:59 p.m.}\\
-\textbf{Haadi Majeed}\\
+\textbf{\\Haadi Majeed}\\
 \end{center}
 
 \medskip
@@ -135,8 +135,10 @@ d-array at the end of each iteration. Iteration 0 refers to the situation just b
 
 \underline{Example:} Let $V=\{s, u, v\}$ and $0, 2, 3$ be the shortest path distances of the vertices  $s, u, v$ from $s$ in $G$ respectively. Then, $s$ is the $1$-closest vertex, $u$ is the $2$-closest vertex, and $v$ is the $3$-closest vertex. Therefore we have $V_1= \{s\}$, $V_2=\{s,u\}$, $V_3=V$.\\ 
 
-Prove by contradiction that a shortest path from the source vertex $s\in V$ to a k-closest vertex $x\in V$ consists only of vertices in $V_k$.
-
+Prove by contradiction that a shortest path from the source vertex $s\in V$ to a k-closest vertex $x\in V$ consists only of vertices in $V_k$. 
+\\\\
+Proof via contradiction:\\
+There is some vertex not in V (the shortest path), $v \notin V$. There exists another path including said $v$. The path will continue with the path going through vertex $v$ until reaching the destination $V_k$, however once it arrives at such, we can identify the issue; as we have introduced excess length/weight into the path. We have now visited a vertex that was not in the original list of verticies. Due to this, when we try to get to a vertex $V_k$, but eventually there will be a point where $V_n$ will differ from what the expected value of $V_n$ should be due to the introduction of a $v \notin V$ This occurs because the path in the orignal V is distinct. 
 \newpage
 \hrulefill \\
 \textbf{Problem 3:} (P is Closed under Reverse Complement)\hfill (20 Points)\\
@@ -147,7 +149,19 @@ and complementing each bit (changing $1$ to $0$ and $0$ to $1$). Let $L$ be a la
 $\overline{L} = \{ \overline{x} : x \in L \}$. \\
 
 Show that if $L$ is in P, then $\overline{L}$ is also in P. Note that the reverse complement of $L$ is not related to the set complement of $L$. Your algorithm takes as input a binary string in $\{ 0, 1 \}^*$.
-
+\begin{algorithm}[H]
+    \Fn(){bitShit()}{
+    \KwIn{Binary String $str$}
+    \SetAlgoLined
+    \SetNoFillComment
+    BinaryString y\\
+    for(i = 0 to str.size)\\
+        \hspace{.5cm}y[i] = 1 - x[str.size - i + 1]\\
+    return y\\
+    }
+\end{algorithm}
+\smallskip
+This algorithm goes through the entireity of X and places the last element within x into the first slot of y and walks down y and up x at the same time to both switch the places of the bits in the string and also inverts the bit. The runtime of this algorithm goes to $O(N)$ due to the loop, it iterates through the entireity of X. The verifier of this algorithim has to run in polynomial time for this to return true, and since it does, this algorithim also does so.
 \newpage
 \hrulefill \\
 \textbf{Problem 4:} (String Transformation is in NP)\hfill (20 Points)\\
@@ -163,6 +177,30 @@ $\textrm{ST} = \{ <x, y, k>: \textrm{there exists a sequence of at most}\; k \; 
 $\qquad \qquad \textrm{of deletions and inversions to transform binary strings}\; x\; \textrm{into}\; y\; \}$. \\
 
 Show that ST is in NP. Note that your algorithm takes two types of input: one type is an ordinary input including two strings $x$ and $y$ along with an integer $k$, and the other is a certificate.
+\\\\
+In order for ST to be in NP (a set of languages) there needs to be an efficent polynomial time certifier that can effectively run a specific instance with the correct certificate. If we can determine x and y in polynomial time via a correct certificate, it will be in NP time as a whole. The method below verfies that strings X and Y via the following:\\L $= \{ x \in \{0,1\}^*, y \in \{0,1\}^*, k:$ there exists a certificate, $cert \in \{0,1\}^*$, with $|cert| = O(|x|^c)$\\ We can determine the algorithim verifies language L in polynomial time which means when we have the right certificate it was decided in P time making the language ST in NP. This was completed within K total operations\\
+%The instance input is string x, y, and int k, and also the certificate is an input. such that stringTransformNP(x,y,k,certy) $= 1 \}$\\
+\begin{algorithm}[H]
+    \Fn(){stringTransformation()}{
+    \KwIn{String x, String y, int k, Certificate cert}
+    \SetAlgoLined
+    \SetNoFillComment
+    if(x == y) //end condition\\
+        \hspace{.5cm}return true\\
+    if(k $\geq$ actionsRemaining) //checks if theres enough actions left against a global var\\
+        \hspace{.5cm}if(x $>$ cert.size)\\
+            \hspace{1cm}for i to size of x\\
+                \hspace{1.5cm}for j to size of x\\
+                    \hspace{2cm}if(deletion(i, j) == cert)\\
+                        \hspace{2.5cm}return true\\
+        \hspace{.5cm}else if(x $<$ cert.size)\\
+            \hspace{1cm}for i to size of x\\
+                \hspace{1.5cm}for j to size of x\\
+                    \hspace{2cm}if(revise(i, j) == cert)\\
+                        \hspace{2.5cm}return true\\
+        \hspace{.5cm}return false\\
+    }
+\end{algorithm}
 
 \newpage
 \hrulefill \\
@@ -187,24 +225,25 @@ $\textrm{RES-CNF} = \{ <\theta> : \theta \; \textrm{is a satisfiable restricted 
 Show that RES-CNF is in P. Note that input to your algorithm is a restricted boolean formula in CNF.
 \smallskip\\
 \begin{algorithm}[H]
-    \Fn(){Alg2(A)}{
+    \Fn(){restrictedCNF()}{
     \KwIn{Array of CNF formula, $input$}
     \SetAlgoLined
     \SetNoFillComment
     \DontPrintSemicolon
-    for($i = 0$ to $input.length$)\\
+    for($i = 0$ to $input.length$) //runs through the length of input once here\\
         \hspace{.5cm}if((input[i]+1 == $\bigwedge $ AND i == 0) OR (input[i]-1 == $\bigwedge $ AND i == input.size-1))\\
-            \hspace{1cm}add to single literal list\\
+            \hspace{1cm}add to single literal list //constant time\\
             
-        \hspace{.5cm}else if((input[i]+1 == $\bigwedge $ AND input[i]-1 == $\bigwedge $)\\\hspace{.75cm}OR (input[i]+1 == $\backslash 0$ AND input[i]-1 == $\bigwedge $))\\
-            \hspace{1cm} add to single literal list\\
-    for($i = 0$ in literalList.size)\\
-        \hspace{.5cm}for($j=0$ in literalList.size)\\
+        \hspace{.5cm}else if(input[i]+1 == $\bigwedge $ AND input[i]-1 == $\bigwedge $)\\
+            \hspace{1cm}add to single literal list //constant time\\
+    for($i = 0$ in literalList.size) //run through length of input\\
+        \hspace{.5cm}for($j=0$ in literalList.size) //run through length of input again with j instead of i\\
             \hspace{1cm}if(input[i] == input[j].not)\\
                 \hspace{1.5cm}return false\\
     return true
     }
     \end{algorithm}
-
+    \smallskip
+    The definition of polynomial time is if something is $O(n^k)$, and the algorithm given above has a run time of $O(n+n^2)$ which runs to $O(n^2)$ which is a polynomial time. By reading the restricted boolean CNF input, we determine where we are currently checking in the first for loop, if the element is surrounded by nothing else but $\bigwedge$ then it is added to the list, but we also have to check if the element is the first or last element in the listing, as nothing would be surronding it, so we check those edge cases as well. 
     
 \end{document}
