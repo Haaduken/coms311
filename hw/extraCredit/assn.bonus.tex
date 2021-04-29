@@ -122,4 +122,7 @@ its running time.\\
     }
 \end{algorithm}
 
+With the algorithm from above, we can use the BST to determine the height and last index with relative ease. We can establish the height of the tree by starting at the end of the array and working backwards from it; we know that the last element in the array is a leaf node that is the deepest within the tree. From there we can find the parent of the node, and then the parent of that one until we encounter the root node of the tree, the number of iterations that occur in that is how deep the tree is. Due to the method of traversal, we go by increments of $\lfloor \frac{i}{2} \rfloor$ for every iteration which results in a run time of $log(n)$.\\
+With the height being found, we can then follow the path we used to determine the hieght back to the root node to assign to the new array B. Because it utilised the same path as prior, this also will have a runtime of $log(n)$\\
+Summed together, it has a runtime of $2*log(n) \rightarrow O(log(n))$
 \end{document}
